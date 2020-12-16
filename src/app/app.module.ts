@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { MultiTransactionComponent } from './pages/multi-transaction/multi-transaction.component';
 import { SingleTransactionComponent } from './pages/single-transaction/single-transaction.component';
 import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
