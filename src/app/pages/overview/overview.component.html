@@ -8,12 +8,13 @@
   </button>
 </div>
 
-<div>
-  <div *ngFor="let player of playerService.players | async">
-    {{ player.name }} : {{ player.balance }}
-  </div>
+<div class="player-grid">
+  <ng-container *ngFor="let player of playerService.players | async">
+    <div class="grid">{{ player.name }}</div>
+    <div class="grid">{{ player.balance }}</div>
+  </ng-container>
 </div>
 
 <div class="button-box end-game-button">
-  <button mat-raised-button color="warn">End Game</button>
+  <button mat-raised-button color="primary">End Game</button>
 </div>

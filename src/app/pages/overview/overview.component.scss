@@ -2,6 +2,27 @@
   margin: 0 auto;
 }
 
+.player-grid {
+  flex: 1 1 0;
+  display: grid;
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-template-columns: 1fr 1fr;
+  font-size: 6vw;
+
+  .grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(4n + 1),
+    &:nth-child(4n + 2) {
+      background-color: #ededed;
+    }
+  }
+}
+
 .end-game-button {
   margin-top: auto;
 }
