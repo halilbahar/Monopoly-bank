@@ -7,10 +7,16 @@ import { Player } from 'src/app/shared/models/player.module';
 })
 export class PlayerService {
 
-  players: BehaviorSubject<Player[]> = new BehaviorSubject(null);
+  players: BehaviorSubject<Player[]>;
+
+  constructor() {
+    const playersStorage = localStorage.getItem('players');
+    const initialValue = playersStorage ? JSON.parse(playersStorage) : [];
+    this.players = new BehaviorSubject(initialValue);
+  }
 
   setPlayer(players: Player[]) {
     this.players.next(players);
-    localStorage.setItem("player", JSON.stringify(players));
+    localStorage.setItem('players', JSON.stringify(players));
   }
 }
