@@ -55,12 +55,16 @@ body {
 .button-box {
   padding: 1rem;
   display: flex;
+
+  button {
+    flex: 1;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
 }
 
 .full-width {
   width: 100% !important;
-}
-
-.f1 {
-  flex: 1;
 }
