@@ -2,7 +2,7 @@
   <div class="new-player-list" formArrayName="names">
     <mat-form-field
       class="full-width"
-      *ngFor="let control of names; let i = index"
+      *ngFor="let control of names.controls; let i = index"
     >
       <mat-label>Name</mat-label>
       <input type="text" matInput [formControlName]="i" />

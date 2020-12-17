@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit {
     this.form.setValidators([this.enoughNamesValidator(), this.uniqueNameValidator()]);
   }
 
-  get names(): AbstractControl[] {
-    return (this.form.get('names') as FormArray).controls;
+  get names(): FormArray {
+    return this.form.get('names') as FormArray;
   }
 
   addPlayer(): void {
@@ -46,6 +46,7 @@ export class HomeComponent implements OnInit {
     const formValue = this.form.value;
     const initialMoney: number = formValue.initialMoney;
     const names = formValue.names as string[];
+    console.log(formValue);
     const player = names.map(name => ({ name, balance: initialMoney } as Player));
 
     this.playerService.setPlayer(player);
