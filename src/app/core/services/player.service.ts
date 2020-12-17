@@ -15,14 +15,19 @@ export class PlayerService {
     this.players = new BehaviorSubject(initialValue);
   }
 
-  setPlayers(players: Player[]) {
+  setPlayers(players: Player[]): void {
     this.players.next(players);
     localStorage.setItem('players', JSON.stringify(this.players.value));
   }
 
-  changePlayer(changedPlayer: Player) {
+  changePlayer(changedPlayer: Player): void {
     const player = this.players.value.find(player => player.name === changedPlayer.name);
     player.balance = changedPlayer.balance;
     localStorage.setItem('players', JSON.stringify(this.players.value));
+  }
+
+  clearGame(): void {
+    this.players.next([]);
+    localStorage.removeItem('players');
   }
 }
