@@ -1,15 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatSelect, MatSelectChange } from '@angular/material/select';
+import { Router } from '@angular/router';
+import { PlayerService } from 'src/app/core/services/player.service';
+import { Player } from 'src/app/shared/models/player.module';
 
 @Component({
   selector: 'app-single-transaction',
   templateUrl: './single-transaction.component.html',
   styleUrls: ['./single-transaction.component.scss']
 })
-export class SingleTransactionComponent implements OnInit {
+export class SingleTransactionComponent {
 
-  constructor() { }
+  form: FormGroup;
 
-  ngOnInit(): void {
+  players: Player[];
+
+  constructor(
+    private router: Router,
+    private playerService: PlayerService,
+    fb: FormBuilder
+  ) {
+    this.form = fb.group({
+      player: [null, Validators.required],
+      amount: [null, Validators.required]
+    });
+
+    this.players = this.playerService.players.value;
   }
 
+  executeTransaction(): void {
+    const formValue = this.form.value;
+    const player = formValue.player as Player;
+    const amount = formValue.amount as number;
+
+    const indexPlayer = this.players.indexOf(player);
+
+    player.balance += amount;
+
+    this.players[indexPlayer] = player;
+
+    this.playerService.setPlayers(this.players);
+    this.router.navigate(['overview']);
+  }
 }
