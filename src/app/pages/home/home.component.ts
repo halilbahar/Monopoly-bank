@@ -45,8 +45,8 @@ export class HomeComponent implements OnInit {
   play(): void {
     const formValue = this.form.value;
     const initialMoney: number = formValue.initialMoney;
-    const names = formValue.names as string[];
-    console.log(formValue);
+    const names = formValue.names.filter(name => name.length) as string[];
+
     const player = names.map(name => ({ name, balance: initialMoney } as Player));
 
     this.playerService.setPlayers(player);
