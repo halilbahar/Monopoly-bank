@@ -69,3 +69,22 @@ body {
 .full-width {
   width: 100% !important;
 }
+
+.player-grid {
+  flex: 1 1 0;
+  display: grid;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 6vw;
+  border-radius: 6px;
+  min-width: 0;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
