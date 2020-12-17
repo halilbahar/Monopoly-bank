@@ -15,7 +15,7 @@ export class PlayerService {
     this.players = new BehaviorSubject(initialValue);
   }
 
-  setPlayer(players: Player[]) {
+  setPlayers(players: Player[]) {
     this.players.next(players);
     localStorage.setItem('players', JSON.stringify(players));
   }

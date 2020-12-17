@@ -1,15 +1,63 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSelect, MatSelectChange } from '@angular/material/select';
+import { Router } from '@angular/router';
+import { PlayerService } from 'src/app/core/services/player.service';
+import { Player } from 'src/app/shared/models/player.module';
 
 @Component({
   selector: 'app-multi-transaction',
   templateUrl: './multi-transaction.component.html',
   styleUrls: ['./multi-transaction.component.scss']
 })
-export class MultiTransactionComponent implements OnInit {
+export class MultiTransactionComponent {
 
-  constructor() { }
+  form: FormGroup;
 
-  ngOnInit(): void {
+  players: Player[];
+
+  playersAbleToReceive: Player[] = [];
+
+  playerToPay: Player | null;
+
+  @ViewChild('playerToReceive') playerToReceiveSelect: MatSelect;
+
+  constructor(
+    private router: Router,
+    private playerService: PlayerService,
+    fb: FormBuilder
+  ) {
+    this.form = fb.group({
+      playerToPay: [null, Validators.required],
+      playerToReceive: [{ value: null, disabled: true }, Validators.required],
+      amount: [null, Validators.required]
+    });
+
+    this.players = this.playerService.players.value;
   }
 
+  changePlayerToPay(event: MatSelectChange): void {
+    this.form.get('playerToReceive').enable();
+    this.playerToPay = event.value;
+    this.playersAbleToReceive = this.players.filter(player => player !== this.playerToPay);
+  }
+
+  executeTransaction(): void {
+    const formValue = this.form.value;
+    const playerToPay = formValue.playerToPay as Player;
+    const playerToReceive = formValue.playerToReceive as Player;
+    const amount = formValue.amount as number;
+
+    const indexPayer = this.players.indexOf(playerToPay);
+    const indexReciever = this.players.indexOf(playerToReceive);
+
+    playerToPay.balance -= amount;
+    playerToReceive.balance += amount;
+
+    this.players[indexPayer] = playerToPay;
+    this.players[indexReciever] = playerToReceive;
+
+    this.playerService.setPlayers(this.players);
+    this.router.navigate(['overview']);
+  }
 }

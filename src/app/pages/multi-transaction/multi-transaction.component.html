@@ -1,1 +1,41 @@
-<p>multi-transaction works!</p>
+<ng-container [formGroup]="form">
+  <mat-form-field>
+    <mat-label>From</mat-label>
+    <mat-select
+      (selectionChange)="changePlayerToPay($event)"
+      formControlName="playerToPay"
+    >
+      <mat-option *ngFor="let player of players" [value]="player">
+        {{ player.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>To</mat-label>
+    <mat-select formControlName="playerToReceive" #playerToReceive>
+      <mat-option *ngFor="let player of playersAbleToReceive" [value]="player">
+        {{ player.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Amount</mat-label>
+    <input type="number" matInput formControlName="amount" />
+  </mat-form-field>
+</ng-container>
+
+<div class="button-box">
+  <button mat-raised-button color="primary" routerLink="/overview">
+    Cancel
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="executeTransaction()"
+    [disabled]="form.invalid"
+  >
+    Go
+  </button>
+</div>

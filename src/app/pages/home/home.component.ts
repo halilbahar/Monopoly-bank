@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     console.log(formValue);
     const player = names.map(name => ({ name, balance: initialMoney } as Player));
 
-    this.playerService.setPlayer(player);
+    this.playerService.setPlayers(player);
     this.router.navigate(['overview']);
   }
 
