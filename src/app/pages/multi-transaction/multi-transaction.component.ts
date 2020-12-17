@@ -48,16 +48,11 @@ export class MultiTransactionComponent {
     const playerToReceive = formValue.playerToReceive as Player;
     const amount = formValue.amount as number;
 
-    const indexPayer = this.players.indexOf(playerToPay);
-    const indexReciever = this.players.indexOf(playerToReceive);
-
     playerToPay.balance -= amount;
     playerToReceive.balance += amount;
 
-    this.players[indexPayer] = playerToPay;
-    this.players[indexReciever] = playerToReceive;
-
-    this.playerService.setPlayers(this.players);
+    this.playerService.changePlayer(playerToPay);
+    this.playerService.changePlayer(playerToReceive);
     this.router.navigate(['overview']);
   }
 }

@@ -17,11 +17,12 @@ export class PlayerService {
 
   setPlayers(players: Player[]) {
     this.players.next(players);
-    localStorage.setItem('players', JSON.stringify(players));
+    localStorage.setItem('players', JSON.stringify(this.players.value));
   }
 
   changePlayer(changedPlayer: Player) {
     const player = this.players.value.find(player => player.name === changedPlayer.name);
     player.balance = changedPlayer.balance;
+    localStorage.setItem('players', JSON.stringify(this.players.value));
   }
 }
