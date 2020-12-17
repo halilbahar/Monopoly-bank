@@ -6,13 +6,9 @@ import { PlayerService } from 'src/app/core/services/player.service';
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
-export class OverviewComponent implements OnInit {
+export class OverviewComponent {
 
   constructor(
     public playerService: PlayerService
   ) { }
-
-  ngOnInit(): void {
-  }
-
 }
