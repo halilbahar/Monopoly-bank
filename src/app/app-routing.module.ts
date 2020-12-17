@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GameGuard } from './core/guard/game.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
 import { MultiTransactionComponent } from './pages/multi-transaction/multi-transaction.component';
@@ -9,7 +10,7 @@ import { SingleTransactionComponent } from './pages/single-transaction/single-tr
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: '', children: [
+    path: '', canActivate: [GameGuard], children: [
       { path: 'overview', component: OverviewComponent },
       { path: 'single-transaction', component: SingleTransactionComponent },
       { path: 'multi-transaction', component: MultiTransactionComponent },
