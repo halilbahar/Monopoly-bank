@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PlayerService } from 'src/app/core/services/player.service';
+import { Player } from 'src/app/shared/models/player.module';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +17,9 @@ export class HomeComponent implements OnInit {
   minPlayer = 2;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router,
+    private playerService: PlayerService
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +40,16 @@ export class HomeComponent implements OnInit {
 
   addPlayer(): void {
     this.names.push(this.fb.control(''));
+  }
+
+  play(): void {
+    const formValue = this.form.value;
+    const initialMoney: number = formValue.initialMoney;
+    const names = formValue.names as string[];
+    const player = names.map(name => ({ name, balance: initialMoney } as Player));
+
+    this.playerService.setPlayer(player);
+    this.router.navigate(['overview']);
   }
 
   private uniqueNameValidator(): ValidatorFn {
@@ -60,7 +75,7 @@ export class HomeComponent implements OnInit {
 
       let count = 0;
       names.controls.forEach(nameControl => nameControl.value && count++);
-      
+
       return count >= this.minPlayer ? null : { enoughPlayer: false };
     };
   }
