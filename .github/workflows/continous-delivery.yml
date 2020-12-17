@@ -12,11 +12,11 @@ jobs:
       steps:
         - name: Checkout 🛎️
           uses: actions/checkout@v2.3.1
-        - name: Use Node.js ${{ matrix.node-version }}
+        - name: Setup node
           uses: actions/setup-node@v1
           with:
             node-version: 14.x
-        - name: Install
+        - name: Install dependencies
           run: npm ci
         - name: Build
           run: npm run build:prod
