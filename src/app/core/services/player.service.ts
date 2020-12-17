@@ -19,4 +19,9 @@ export class PlayerService {
     this.players.next(players);
     localStorage.setItem('players', JSON.stringify(players));
   }
+
+  changePlayer(changedPlayer: Player) {
+    const player = this.players.value.find(player => player.name === changedPlayer.name);
+    player.balance = changedPlayer.balance;
+  }
 }

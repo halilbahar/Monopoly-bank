@@ -34,13 +34,9 @@ export class SingleTransactionComponent {
     const player = formValue.player as Player;
     const amount = formValue.amount as number;
 
-    const indexPlayer = this.players.indexOf(player);
-
     player.balance += amount;
 
-    this.players[indexPlayer] = player;
-
-    this.playerService.setPlayers(this.players);
+    this.playerService.changePlayer(player);
     this.router.navigate(['overview']);
   }
 }
