@@ -53,9 +53,12 @@ body {
 }
 
 .button-box {
-  margin-top: auto;
   padding: 1rem;
   display: flex;
+}
+
+.full-width {
+  width: 100% !important;
 }
 
 .f1 {

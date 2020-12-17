@@ -3,10 +3,6 @@
   padding: 1rem;
 }
 
-.full-width {
-  width: 100% !important;
-}
-
 .new-player-list {
   display: flex;
   flex-direction: column;
@@ -17,9 +13,4 @@
 
 .money-input {
   margin-top: auto;
-}
-
-.button-box {
-  flex: 0 0 auto;
-  margin-top: unset !important;
 }
