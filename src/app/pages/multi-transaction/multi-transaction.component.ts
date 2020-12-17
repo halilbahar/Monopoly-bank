@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/core/services/player.service';
@@ -30,7 +30,7 @@ export class MultiTransactionComponent {
     this.form = fb.group({
       playerToPay: [null, Validators.required],
       playerToReceive: [{ value: null, disabled: true }, Validators.required],
-      amount: [null, Validators.required]
+      amount: [null, [Validators.required, this.nonNegative()]]
     });
 
     this.players = this.playerService.players.value;
@@ -54,5 +54,11 @@ export class MultiTransactionComponent {
     this.playerService.changePlayer(playerToPay);
     this.playerService.changePlayer(playerToReceive);
     this.router.navigate(['overview']);
+  }
+
+  private nonNegative(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      return control.value < 0 ? { nonNegative: false } : null;
+    }
   }
 }
