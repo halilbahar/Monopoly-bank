@@ -1,1 +1,36 @@
-<p>home works!</p>
+<ng-container [formGroup]="form">
+  <div class="new-player-list" formArrayName="names">
+    <mat-form-field
+      class="full-width"
+      *ngFor="let control of names; let i = index"
+    >
+      <mat-label>Name</mat-label>
+      <input type="text" matInput [formControlName]="i" />
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="names.length >= playerLimit"
+      (click)="addPlayer()"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <mat-form-field class="full-width money-input">
+    <mat-label>Initial Money</mat-label>
+    <input type="number" matInput formControlName="initialMoney" />
+  </mat-form-field>
+</ng-container>
+
+<div class="button-box">
+  <button
+    mat-raised-button
+    color="primary"
+    class="f1"
+    [disabled]="form.invalid"
+  >
+    Play
+  </button>
+</div>
