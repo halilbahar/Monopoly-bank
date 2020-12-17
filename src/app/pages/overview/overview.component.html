@@ -1,1 +1,19 @@
-<p>overview works!</p>
+<h2 class="title">Players involved in action</h2>
+<div class="button-box">
+  <button mat-raised-button color="primary" routerLink="/single-transaction">
+    One
+  </button>
+  <button mat-raised-button color="primary" routerLink="/multi-transaction">
+    Two
+  </button>
+</div>
+
+<div>
+  <div *ngFor="let player of playerService.players | async">
+    {{ player.name }} : {{ player.balance }}
+  </div>
+</div>
+
+<div class="button-box end-game-button">
+  <button mat-raised-button color="warn">End Game</button>
+</div>
