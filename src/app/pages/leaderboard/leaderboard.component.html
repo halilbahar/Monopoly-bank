@@ -1,1 +1,11 @@
-<p>leaderboard works!</p>
+<div class="player-grid">
+  <ng-container *ngFor="let player of players | async">
+    <div class="grid">{{ player.rank }}</div>
+    <div class="grid">{{ player.name }}</div>
+    <div class="grid">{{ player.balance }}</div>
+  </ng-container>
+</div>
+
+<div class="button-box">
+  <button mat-raised-button color="primary" routerLink="/">New Game</button>
+</div>
