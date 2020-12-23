@@ -11,6 +11,14 @@
     >
       <mat-label>Player {{ i + 1 }}</mat-label>
       <input type="text" matInput [formControlName]="i" />
+      <button
+        mat-icon-button
+        matSuffix
+        [disabled]="names.controls.length <= minPlayer"
+        (click)="names.removeAt(i)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-form-field>
 
     <button
