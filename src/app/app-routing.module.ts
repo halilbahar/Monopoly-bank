@@ -6,7 +6,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component';
 import { MultiTransactionComponent } from './pages/multi-transaction/multi-transaction.component';
 import { OverviewComponent } from './pages/overview/overview.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SingleTransactionComponent } from './pages/single-transaction/single-transaction.component';
 
 const routes: Routes = [
@@ -21,7 +20,7 @@ const routes: Routes = [
       { path: 'leaderboard', component: LeaderboardComponent }
     ]
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
