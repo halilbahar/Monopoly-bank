@@ -17,7 +17,8 @@
         "LABEL": {
             "BANK": "Bank",
             "TRANSACTION": "Überweisung",
-            "END_GAME": "Spiel beenden"
+            "END_GAME": "Spiel beenden",
+            "NEW_GAME": "Neues Spiel beginnen"
         }
     },
     "TRANSACTION": {

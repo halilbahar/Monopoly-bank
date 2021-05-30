@@ -17,7 +17,8 @@
         "LABEL": {
             "BANK": "Bank",
             "TRANSACTION": "Transaction",
-            "END_GAME": "End game"
+            "END_GAME": "End game",
+            "NEW_GAME": "New game"
         }
     },
     "TRANSACTION": {
