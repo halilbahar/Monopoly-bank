@@ -10,7 +10,7 @@
 <div class="player-grid">
   <ng-container *ngFor="let player of playerService.players | async">
     <div class="grid-item">{{ player.name }}</div>
-    <div class="grid-item">{{ player.balance }}</div>
+    <div class="grid-item">{{ player.balance | number }}</div>
   </ng-container>
 </div>
 
