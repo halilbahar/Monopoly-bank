@@ -8,14 +8,24 @@
     <mat-form-field class="full-width" *ngFor="let control of names.controls; let i = index">
       <mat-label>Player {{ i + 1 }}</mat-label>
       <input type="text" matInput [formControlName]="i" />
-      <button mat-icon-button matSuffix [disabled]="names.controls.length <= minPlayer" (click)="names.removeAt(i)">
+      <button
+        mat-icon-button
+        matSuffix
+        [disabled]="names.controls.length <= minPlayer"
+        (click)="names.removeAt(i)"
+      >
         <mat-icon>delete</mat-icon>
       </button>
       <mat-error *ngIf="!control.errors?.isUnique">This name is not unique</mat-error>
     </mat-form-field>
 
     <div class="button-box-top">
-      <button mat-raised-button color="primary" [disabled]="names.length >= playerLimit" (click)="addPlayer()">
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="names.length >= playerLimit"
+        (click)="addPlayer()"
+      >
         <mat-icon>add</mat-icon>
       </button>
     </div>
