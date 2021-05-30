@@ -12,7 +12,9 @@ import { SingleTransactionComponent } from './pages/single-transaction/single-tr
 const routes: Routes = [
   { path: '', canActivate: [NoGameGuard], component: HomeComponent },
   {
-    path: '', canActivate: [GameGuard], children: [
+    path: '',
+    canActivate: [GameGuard],
+    children: [
       { path: 'overview', component: OverviewComponent },
       { path: 'single-transaction', component: SingleTransactionComponent },
       { path: 'multi-transaction', component: MultiTransactionComponent },
@@ -26,4 +28,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

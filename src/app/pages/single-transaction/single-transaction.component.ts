@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/core/services/player.service';
 import { Player } from 'src/app/shared/models/player.module';
@@ -11,16 +10,11 @@ import { Player } from 'src/app/shared/models/player.module';
   styleUrls: ['./single-transaction.component.scss']
 })
 export class SingleTransactionComponent {
-
   form: FormGroup;
 
   players: Player[];
 
-  constructor(
-    private router: Router,
-    private playerService: PlayerService,
-    fb: FormBuilder
-  ) {
+  constructor(private router: Router, private playerService: PlayerService, fb: FormBuilder) {
     this.form = fb.group({
       player: [null, Validators.required],
       amount: [null, Validators.required]

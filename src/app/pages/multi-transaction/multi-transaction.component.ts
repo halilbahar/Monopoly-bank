@@ -1,5 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn,
+  Validators
+} from '@angular/forms';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/core/services/player.service';
@@ -11,7 +18,6 @@ import { Player } from 'src/app/shared/models/player.module';
   styleUrls: ['./multi-transaction.component.scss']
 })
 export class MultiTransactionComponent {
-
   form: FormGroup;
 
   players: Player[];
@@ -22,11 +28,7 @@ export class MultiTransactionComponent {
 
   @ViewChild('playerToReceive') playerToReceiveSelect: MatSelect;
 
-  constructor(
-    private router: Router,
-    private playerService: PlayerService,
-    fb: FormBuilder
-  ) {
+  constructor(private router: Router, private playerService: PlayerService, fb: FormBuilder) {
     this.form = fb.group({
       playerToPay: [null, Validators.required],
       playerToReceive: [{ value: null, disabled: true }, Validators.required],
@@ -59,6 +61,6 @@ export class MultiTransactionComponent {
   private nonNegative(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       return control.value < 0 ? { nonNegative: false } : null;
-    }
+    };
   }
 }

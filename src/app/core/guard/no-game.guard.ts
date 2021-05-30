@@ -6,13 +6,11 @@ import { PlayerService } from '../services/player.service';
   providedIn: 'root'
 })
 export class NoGameGuard implements CanActivate {
-
-  constructor(
-    private playerService: PlayerService,
-    private router: Router
-  ) { }
+  constructor(private playerService: PlayerService, private router: Router) {}
 
   canActivate(): boolean | UrlTree {
-    return this.playerService.players.value.length === 0 ? true : this.router.createUrlTree(['/overview']);
+    return this.playerService.players.value.length === 0
+      ? true
+      : this.router.createUrlTree(['/overview']);
   }
 }

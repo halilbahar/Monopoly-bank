@@ -6,7 +6,6 @@ import { Player } from 'src/app/shared/models/player.module';
   providedIn: 'root'
 })
 export class PlayerService {
-
   players: BehaviorSubject<Player[]>;
 
   constructor() {

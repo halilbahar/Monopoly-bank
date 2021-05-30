@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import {
+  FormArray,
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn,
+  Validators
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/core/services/player.service';
 import { Player } from 'src/app/shared/models/player.module';
@@ -10,7 +17,6 @@ import { Player } from 'src/app/shared/models/player.module';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   form: FormGroup;
 
   playerLimit = 8;
@@ -20,14 +26,11 @@ export class HomeComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private playerService: PlayerService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      names: this.fb.array([
-        this.fb.control(''),
-        this.fb.control('')
-      ]),
+      names: this.fb.array([this.fb.control(''), this.fb.control('')]),
       initialMoney: [15000, Validators.required]
     });
 

@@ -1,10 +1,7 @@
 <ng-container [formGroup]="form">
   <mat-form-field>
     <mat-label>From</mat-label>
-    <mat-select
-      (selectionChange)="changePlayerToPay($event)"
-      formControlName="playerToPay"
-    >
+    <mat-select (selectionChange)="changePlayerToPay($event)" formControlName="playerToPay">
       <mat-option *ngFor="let player of players" [value]="player">
         {{ player.name }}
       </mat-option>
@@ -27,9 +24,7 @@
 </ng-container>
 
 <div class="button-box">
-  <button mat-raised-button color="primary" routerLink="/overview">
-    Cancel
-  </button>
+  <button mat-raised-button color="primary" routerLink="/overview">Cancel</button>
   <button
     mat-raised-button
     color="primary"

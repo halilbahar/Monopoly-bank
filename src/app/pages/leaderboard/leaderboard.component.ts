@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PlayerService } from 'src/app/core/services/player.service';
 import { Player } from 'src/app/shared/models/player.module';
 
@@ -8,7 +8,6 @@ import { Player } from 'src/app/shared/models/player.module';
   styleUrls: ['./leaderboard.component.scss']
 })
 export class LeaderboardComponent {
-
   players: (Player & { rank: number })[];
 
   constructor(playerService: PlayerService) {
