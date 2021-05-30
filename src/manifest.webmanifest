@@ -1,7 +1,7 @@
 {
   "name": "monopoly-bank",
   "short_name": "monopoly-bank",
-  "theme_color": "#1976d2",
+  "theme_color": "#9c27b0",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
