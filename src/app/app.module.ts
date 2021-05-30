@@ -50,7 +50,7 @@ import { SingleTransactionComponent } from './pages/single-transaction/single-tr
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (http: HttpClient) => new TranslateHttpLoader(http),
+        useFactory: (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/'),
         deps: [HttpClient]
       },
       defaultLanguage: 'en'
