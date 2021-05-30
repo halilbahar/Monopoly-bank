@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { PlayerService } from 'src/app/core/services/player.service';
+
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-overview',

@@ -1,3 +1,6 @@
+import { PlayerService } from 'src/app/core/services/player.service';
+import { Player } from 'src/app/shared/models/player.module';
+
 import { Component, OnInit } from '@angular/core';
 import {
   FormArray,
@@ -8,8 +11,6 @@ import {
   Validators
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PlayerService } from 'src/app/core/services/player.service';
-import { Player } from 'src/app/shared/models/player.module';
 
 @Component({
   selector: 'app-home',

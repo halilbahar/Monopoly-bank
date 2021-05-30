@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/core/services/player.service';
 import { Player } from 'src/app/shared/models/player.module';
+
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-single-transaction',

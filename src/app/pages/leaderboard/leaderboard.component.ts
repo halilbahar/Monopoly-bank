@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
 import { PlayerService } from 'src/app/core/services/player.service';
 import { Player } from 'src/app/shared/models/player.module';
+
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-leaderboard',

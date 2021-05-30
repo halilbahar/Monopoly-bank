@@ -1,3 +1,6 @@
+import { PlayerService } from 'src/app/core/services/player.service';
+import { Player } from 'src/app/shared/models/player.module';
+
 import { Component, ViewChild } from '@angular/core';
 import {
   AbstractControl,
@@ -9,8 +12,6 @@ import {
 } from '@angular/forms';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
-import { PlayerService } from 'src/app/core/services/player.service';
-import { Player } from 'src/app/shared/models/player.module';
 
 @Component({
   selector: 'app-multi-transaction',
