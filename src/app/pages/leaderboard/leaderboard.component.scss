@@ -1,10 +1,11 @@
 .player-grid {
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr auto;
 }
 
 .grid-item {
-  &:nth-child(6n + 1) {
-    padding: 0 0.5rem;
+  padding-left: 1rem;
+  &:nth-child(3n + 3) {
+    padding-right: 1rem;
   }
 
   &:nth-child(6n + 1),
