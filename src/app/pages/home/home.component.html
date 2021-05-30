@@ -1,12 +1,12 @@
 <ng-container [formGroup]="form">
   <mat-form-field>
-    <mat-label>Initial Money</mat-label>
+    <mat-label [translate]>HOME.LABEL.MONEY</mat-label>
     <input type="number" matInput formControlName="initialMoney" />
   </mat-form-field>
 
   <div class="new-player-list" formArrayName="names">
     <mat-form-field class="full-width" *ngFor="let control of names.controls; let i = index">
-      <mat-label>Player {{ i + 1 }}</mat-label>
+      <mat-label [translate] [translateParams]="{ index: i + 1 }">HOME.LABEL.PLAYER</mat-label>
       <input type="text" matInput [formControlName]="i" />
       <button
         mat-icon-button
@@ -16,7 +16,7 @@
       >
         <mat-icon>delete</mat-icon>
       </button>
-      <mat-error *ngIf="!control.errors?.isUnique">This name is not unique</mat-error>
+      <mat-error *ngIf="!control.errors?.isUnique" [translate]>HOME.ERROR.NOT_UNIQUE</mat-error>
     </mat-form-field>
 
     <div class="button-box-top">
@@ -33,5 +33,7 @@
 </ng-container>
 
 <div class="button-box-top">
-  <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="play()">Play</button>
+  <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="play()">
+    {{ 'HOME.LABEL.PLAY' | translate }}
+  </button>
 </div>

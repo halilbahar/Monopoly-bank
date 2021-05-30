@@ -3,9 +3,15 @@
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>settings</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>English</button>
-    <button mat-menu-item>German</button>
+  <mat-menu #menu>
+    <button
+      *ngFor="let language of languages"
+      mat-menu-item
+      [translate]
+      (click)="changeLanguage(language.code)"
+    >
+      LANGUAGES.{{ language.name }}
+    </button>
   </mat-menu>
 </h1>
 <router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+{
+    "HOME": {
+        "LABEL": {
+            "MONEY": "Anfangsbetrag",
+            "PLAYER": "{{index}}. Spieler",
+            "PLAY": "Spielen"
+        },
+        "ERROR": {
+            "NOT_UNIQUE": "Dieser name ist nicht einmalig"
+        }
+    },
+    "LANGUAGES": {
+        "ENGLISH": "Englisch",
+        "GERMAN": "Deutsch"
+    }
+}
