@@ -1,0 +1,8 @@
+*
+!*/
+!src/app/**
+!src/assets/**
+!src/environments/**
+
+# Ignore tests for now
+*.spec.ts
