@@ -1,10 +1,10 @@
 <div class="player-grid">
   <ng-container *ngFor="let player of players">
-    <div class="grid-item">{{ player.rank }}</div>
+    <div class="grid-item t-left">{{ player.rank }}</div>
     <div class="grid-item">
       <div class="text-overflow">{{ player.name }}</div>
     </div>
-    <div class="grid-item">{{ player.balance | number }}</div>
+    <div class="grid-item t-right">{{ player.balance | number }}</div>
   </ng-container>
 </div>
 
