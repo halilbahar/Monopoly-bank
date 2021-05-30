@@ -16,8 +16,8 @@ const routes: Routes = [
     canActivate: [GameGuard],
     children: [
       { path: 'overview', component: OverviewComponent },
-      { path: 'single-transaction', component: SingleTransactionComponent },
-      { path: 'multi-transaction', component: MultiTransactionComponent },
+      { path: 'bank', component: SingleTransactionComponent },
+      { path: 'transaction', component: MultiTransactionComponent },
       { path: 'leaderboard', component: LeaderboardComponent }
     ]
   },
