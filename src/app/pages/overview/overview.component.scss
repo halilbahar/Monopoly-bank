@@ -3,9 +3,15 @@
 }
 
 .player-grid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
 
-  div {
+  & > div {
+    padding-left: 1rem;
+
+    &:nth-child(2n) {
+      padding-right: 1rem;
+    }
+
     &:nth-child(4n + 1),
     &:nth-child(4n + 2) {
       background-color: #cfbaf2;

@@ -9,7 +9,9 @@
 
 <div class="player-grid">
   <ng-container *ngFor="let player of playerService.players | async">
-    <div class="grid-item">{{ player.name }}</div>
+    <div class="grid-item">
+      <div class="text-overflow">{{ player.name }}</div>
+    </div>
     <div class="grid-item">{{ player.balance | number }}</div>
   </ng-container>
 </div>

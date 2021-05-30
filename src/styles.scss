@@ -100,6 +100,11 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
+  min-width: 0;
+
+  .text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
