@@ -14,7 +14,7 @@
         [disabled]="names.controls.length <= minPlayer"
         (click)="names.removeAt(i)"
       >
-        <mat-icon>delete</mat-icon>
+        <mat-icon>close</mat-icon>
       </button>
       <mat-error *ngIf="!control.errors?.isUnique" [translate]>HOME.ERROR.NOT_UNIQUE</mat-error>
     </mat-form-field>
