@@ -1,0 +1,34 @@
+{
+    "HOME": {
+        "LABEL": {
+            "MONEY": "Initial Money",
+            "PLAYER": "Player {{index}}",
+            "PLAY": "Play"
+        },
+        "ERROR": {
+            "NOT_UNIQUE": "This name is not unique"
+        }
+    },
+    "LANGUAGES": {
+        "ENGLISH": "English",
+        "GERMAN": "German"
+    },
+    "OVERVIEW": {
+        "LABEL": {
+            "BANK": "Bank",
+            "TRANSACTION": "Transaction",
+            "END_GAME": "End game",
+            "NEW_GAME": "New game"
+        }
+    },
+    "TRANSACTION": {
+        "LABEL": {
+            "PLAYER": "Player",
+            "AMOUNT": "Amount",
+            "FROM": "From",
+            "TO": "To",
+            "CANCEL": "Cancel",
+            "GO": "Go"
+        }
+    }
+}

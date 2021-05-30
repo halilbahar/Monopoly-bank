@@ -1,0 +1,85 @@
+{
+  "configVersion": 1,
+  "timestamp": 1622415458288,
+  "index": "/monopoly-bank/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/monopoly-bank/favicon.ico",
+        "/monopoly-bank/index.html",
+        "/monopoly-bank/main.3db592825e1ab566079b.js",
+        "/monopoly-bank/manifest.webmanifest",
+        "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js",
+        "/monopoly-bank/runtime.622d6839b34525748e31.js",
+        "/monopoly-bank/styles.2a2ddea0da5bcae2d274.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/monopoly-bank/assets/i18n/de.json",
+        "/monopoly-bank/assets/i18n/en.json",
+        "/monopoly-bank/assets/icons/icon-128x128.png",
+        "/monopoly-bank/assets/icons/icon-144x144.png",
+        "/monopoly-bank/assets/icons/icon-152x152.png",
+        "/monopoly-bank/assets/icons/icon-192x192.png",
+        "/monopoly-bank/assets/icons/icon-384x384.png",
+        "/monopoly-bank/assets/icons/icon-512x512.png",
+        "/monopoly-bank/assets/icons/icon-72x72.png",
+        "/monopoly-bank/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/monopoly-bank/assets/i18n/de.json": "40f8d52daa09fda50a633a6ac3f2e2edf3595841",
+    "/monopoly-bank/assets/i18n/en.json": "224616a09db9559931d93a36e9114a21705856ec",
+    "/monopoly-bank/assets/icons/icon-128x128.png": "a8f4b05c4e711b9c3f4df95f1ce17af226900755",
+    "/monopoly-bank/assets/icons/icon-144x144.png": "d16bae24175d04acda7e4e522644d7227803effc",
+    "/monopoly-bank/assets/icons/icon-152x152.png": "4b6fd584bc8aad57422f2eeeb11a6e3ed3232bdd",
+    "/monopoly-bank/assets/icons/icon-192x192.png": "ee0af7eba611b69f683c9e1861162c370ab0ebba",
+    "/monopoly-bank/assets/icons/icon-384x384.png": "e5da64eda535fc0d84b4090e54542cc80669a251",
+    "/monopoly-bank/assets/icons/icon-512x512.png": "ae0909b1278b1f0653116f11e37a07e853d22888",
+    "/monopoly-bank/assets/icons/icon-72x72.png": "2f3abde545c8ba064adee3712de5ba96210fc686",
+    "/monopoly-bank/assets/icons/icon-96x96.png": "e50ff9fc8eaf1a6651e2ef08542f1d1e0d9020b7",
+    "/monopoly-bank/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/monopoly-bank/index.html": "d15e538599dc7442bad126e4f4d3e236a82329bb",
+    "/monopoly-bank/main.3db592825e1ab566079b.js": "2730771fe3d899904c3633b62e256a9538970a88",
+    "/monopoly-bank/manifest.webmanifest": "76695eaca9a682ee13c7f5a427feb3c9a4813906",
+    "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js": "76ecd4853cf493df6a81609e5978c619e0c08a01",
+    "/monopoly-bank/runtime.622d6839b34525748e31.js": "4d2402a8f9ab309e70134691742dd953060a8a3d",
+    "/monopoly-bank/styles.2a2ddea0da5bcae2d274.css": "747c4639845afd6c6a6fc784ac69eb6850ec9f3e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
