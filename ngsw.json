@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622415831721,
+  "timestamp": 1622416491812,
   "index": "/monopoly-bank/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/monopoly-bank/favicon.ico",
         "/monopoly-bank/index.html",
-        "/monopoly-bank/main.3db592825e1ab566079b.js",
+        "/monopoly-bank/main.385acd678e301e502a5d.js",
         "/monopoly-bank/manifest.webmanifest",
         "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js",
         "/monopoly-bank/runtime.622d6839b34525748e31.js",
@@ -56,9 +56,9 @@
     "/monopoly-bank/assets/icons/icon-72x72.png": "2f3abde545c8ba064adee3712de5ba96210fc686",
     "/monopoly-bank/assets/icons/icon-96x96.png": "e50ff9fc8eaf1a6651e2ef08542f1d1e0d9020b7",
     "/monopoly-bank/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/monopoly-bank/index.html": "d15e538599dc7442bad126e4f4d3e236a82329bb",
-    "/monopoly-bank/main.3db592825e1ab566079b.js": "2730771fe3d899904c3633b62e256a9538970a88",
-    "/monopoly-bank/manifest.webmanifest": "e7eaa727ee629a23d2b0a79f558a98f98b3ee3c4",
+    "/monopoly-bank/index.html": "966767b40f74538d835f1abe3a72028d7eaaae9a",
+    "/monopoly-bank/main.385acd678e301e502a5d.js": "d34298aba3b236bb795638ed8e0e825753d0f8a8",
+    "/monopoly-bank/manifest.webmanifest": "34423b41a6a919cdc12f36cad3cd7aa450eed78e",
     "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js": "76ecd4853cf493df6a81609e5978c619e0c08a01",
     "/monopoly-bank/runtime.622d6839b34525748e31.js": "4d2402a8f9ab309e70134691742dd953060a8a3d",
     "/monopoly-bank/styles.2a2ddea0da5bcae2d274.css": "747c4639845afd6c6a6fc784ac69eb6850ec9f3e"
