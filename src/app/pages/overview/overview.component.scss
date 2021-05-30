@@ -4,12 +4,12 @@
 
 .player-grid {
   grid-template-columns: 1fr 1fr;
-}
 
-.grid-item {
-  &:nth-child(4n + 1),
-  &:nth-child(4n + 2) {
-    background-color: #cfbaf2;
+  div {
+    &:nth-child(4n + 1),
+    &:nth-child(4n + 2) {
+      background-color: #cfbaf2;
+    }
   }
 }
 
