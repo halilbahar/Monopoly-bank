@@ -19,5 +19,15 @@
             "TRANSACTION": "Überweisung",
             "END_GAME": "Spiel beenden"
         }
+    },
+    "TRANSACTION": {
+        "LABEL": {
+            "PLAYER": "Spieler",
+            "AMOUNT": "Menge",
+            "FROM": "Von",
+            "TO": "An",
+            "CANCEL": "Abbrechen",
+            "GO": "Durchführen"
+        }
     }
 }

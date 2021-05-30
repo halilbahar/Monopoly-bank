@@ -1,6 +1,6 @@
 <ng-container [formGroup]="form">
   <mat-form-field>
-    <mat-label>Player</mat-label>
+    <mat-label [translate]>TRANSACTION.LABEL.PLAYER</mat-label>
     <mat-select formControlName="player">
       <mat-option *ngFor="let player of players" [value]="player">
         {{ player.name }}
@@ -9,19 +9,21 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Amount</mat-label>
+    <mat-label [translate]>TRANSACTION.LABEL.AMOUNT</mat-label>
     <input type="number" matInput formControlName="amount" />
   </mat-form-field>
 </ng-container>
 
 <div class="button-box-top">
-  <button mat-raised-button color="primary" routerLink="/overview">Cancel</button>
+  <button mat-raised-button color="primary" routerLink="/overview">
+    {{ 'TRANSACTION.LABEL.CANCEL' | translate }}
+  </button>
   <button
     mat-raised-button
     color="primary"
     [disabled]="form.invalid"
     (click)="executeTransaction()"
   >
-    Go
+    {{ 'TRANSACTION.LABEL.GO' | translate }}
   </button>
 </div>

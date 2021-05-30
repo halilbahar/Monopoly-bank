@@ -19,5 +19,15 @@
             "TRANSACTION": "Transaction",
             "END_GAME": "End game"
         }
+    },
+    "TRANSACTION": {
+        "LABEL": {
+            "PLAYER": "Player",
+            "AMOUNT": "Amount",
+            "FROM": "From",
+            "TO": "To",
+            "CANCEL": "Cancel",
+            "GO": "Go"
+        }
     }
 }
