@@ -2,56 +2,17 @@
   margin: 0 auto;
 }
 
-.end-game-button {
-  margin-top: auto;
+.player-grid {
+  grid-template-columns: 1fr 1fr;
 }
 
-.table-wrapper {
-  flex: 1;
-
-  .player-table {
-    height: 100%;
-    width: 100%;
-    border-collapse: collapse;
-
-    tr {
-      text-align: center;
-      padding: 1rem;
-
-      .actions-cell {
-        width: 1px;
-      }
-
-      td {
-        &:nth-child(1) {
-          padding: 0 0 0 1rem;
-        }
-
-        &:nth-child(2) {
-          padding: 0 1rem;
-        }
-
-        &:nth-child(3) {
-          padding: 1rem 1rem 1rem 0;
-        }
-      }
-
-      .actions {
-        height: 100%;
-        display: flex;
-
-        button {
-          width: 30%;
-        }
-
-        button:not(:first-child) {
-          margin-left: 0.3rem;
-        }
-      }
-    }
-
-    tr:nth-child(odd) {
-      background-color: #cfbaf2;
-    }
+.grid-item {
+  &:nth-child(4n + 1),
+  &:nth-child(4n + 2) {
+    background-color: #cfbaf2;
   }
+}
+
+.end-game-button {
+  margin-top: auto;
 }

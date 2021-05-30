@@ -1,26 +1,18 @@
 <h2 class="title">Players involved in action</h2>
 <div class="button-box">
-  <button mat-raised-button color="primary" routerLink="/single-transaction">One</button>
-  <button mat-raised-button color="primary" routerLink="/multi-transaction">Two</button>
+  <button mat-raised-button color="primary" routerLink="/single-transaction">
+    One
+  </button>
+  <button mat-raised-button color="primary" routerLink="/multi-transaction">
+    Two
+  </button>
 </div>
 
-<div class="table-wrapper">
-  <table class="player-table">
-    <tr *ngFor="let player of playerService.players | async">
-      <td>{{ player.name }}</td>
-      <td>{{ player.balance }}</td>
-      <td class="actions-cell">
-        <div class="actions">
-          <button mat-flat-button color="primary">
-            <mat-icon>swap_vert</mat-icon>
-          </button>
-          <button mat-flat-button color="primary">
-            <mat-icon> attach_money</mat-icon>
-          </button>
-        </div>
-      </td>
-    </tr>
-  </table>
+<div class="player-grid">
+  <ng-container *ngFor="let player of playerService.players | async">
+    <div class="grid-item">{{ player.name }}</div>
+    <div class="grid-item">{{ player.balance }}</div>
+  </ng-container>
 </div>
 
 <div class="button-box end-game-button">
