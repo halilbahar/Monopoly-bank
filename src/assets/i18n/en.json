@@ -12,5 +12,12 @@
     "LANGUAGES": {
         "ENGLISH": "English",
         "GERMAN": "German"
+    },
+    "OVERVIEW": {
+        "LABEL": {
+            "BANK": "Bank",
+            "TRANSACTION": "Transaction",
+            "END_GAME": "End game"
+        }
     }
 }

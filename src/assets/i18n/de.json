@@ -12,5 +12,12 @@
     "LANGUAGES": {
         "ENGLISH": "Englisch",
         "GERMAN": "Deutsch"
+    },
+    "OVERVIEW": {
+        "LABEL": {
+            "BANK": "Bank",
+            "TRANSACTION": "Überweisung",
+            "END_GAME": "Spiel beenden"
+        }
     }
 }

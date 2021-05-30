@@ -1,6 +1,10 @@
 <div class="button-box-bottom">
-  <button mat-raised-button color="primary" routerLink="/single-transaction">Bank</button>
-  <button mat-raised-button color="primary" routerLink="/multi-transaction">Transaction</button>
+  <button mat-raised-button color="primary" routerLink="/single-transaction">
+    {{ 'OVERVIEW.LABEL.BANK' | translate }}
+  </button>
+  <button mat-raised-button color="primary" routerLink="/multi-transaction">
+    {{ 'OVERVIEW.LABEL.TRANSACTION' | translate }}
+  </button>
 </div>
 
 <div class="player-grid">
@@ -11,5 +15,7 @@
 </div>
 
 <div class="button-box-top end-game-button">
-  <button mat-raised-button color="primary" routerLink="/leaderboard">End Game</button>
+  <button mat-raised-button color="primary" routerLink="/leaderboard">
+    {{ 'OVERVIEW.LABEL.END_GAME' | translate }}
+  </button>
 </div>
