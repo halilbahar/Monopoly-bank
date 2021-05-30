@@ -11,11 +11,14 @@
       <button mat-icon-button matSuffix [disabled]="names.controls.length <= minPlayer" (click)="names.removeAt(i)">
         <mat-icon>delete</mat-icon>
       </button>
+      <mat-error *ngIf="!control.errors?.isUnique">This name is not unique</mat-error>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" [disabled]="names.length >= playerLimit" (click)="addPlayer()">
-      <mat-icon>add</mat-icon>
-    </button>
+    <div class="button-box-top">
+      <button mat-raised-button color="primary" [disabled]="names.length >= playerLimit" (click)="addPlayer()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
   </div>
 </ng-container>
 

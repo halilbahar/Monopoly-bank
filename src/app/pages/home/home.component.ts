@@ -61,16 +61,20 @@ export class HomeComponent implements OnInit {
     return (group: FormGroup): ValidationErrors => {
       const names = group.get('names') as FormArray;
 
-      const existingName = [];
+      const existingName = new Set();
       names.controls.forEach(nameControl => {
         if (nameControl.value) {
-          existingName.push(nameControl.value);
+          const name = nameControl.value;
+          if (!existingName.has(name)) {
+            existingName.add(name);
+            nameControl.setErrors(null);
+          } else {
+            nameControl.setErrors({ isUnique: false });
+          }
         }
       });
 
-      // TODO: Set error on fields
-      const isUnique = new Set(existingName).size === existingName.length;
-      return isUnique ? null : { isUnique: false };
+      return null;
     };
   }
 
