@@ -1,34 +1,34 @@
 {
-    "HOME": {
-        "LABEL": {
-            "MONEY": "Anfangsbetrag",
-            "PLAYER": "{{index}}. Spieler",
-            "PLAY": "Spielen"
-        },
-        "ERROR": {
-            "NOT_UNIQUE": "Dieser name ist nicht einmalig"
-        }
+  "HOME": {
+    "LABEL": {
+      "MONEY": "Anfangsbetrag",
+      "PLAYER": "{{index}}. Spieler",
+      "PLAY": "Spielen"
     },
-    "LANGUAGES": {
-        "ENGLISH": "Englisch",
-        "GERMAN": "Deutsch"
-    },
-    "OVERVIEW": {
-        "LABEL": {
-            "BANK": "Bank",
-            "TRANSACTION": "Überweisung",
-            "END_GAME": "Spiel beenden",
-            "NEW_GAME": "Neues Spiel beginnen"
-        }
-    },
-    "TRANSACTION": {
-        "LABEL": {
-            "PLAYER": "Spieler",
-            "AMOUNT": "Menge",
-            "FROM": "Von",
-            "TO": "An",
-            "CANCEL": "Abbrechen",
-            "GO": "Durchführen"
-        }
+    "ERROR": {
+      "NOT_UNIQUE": "Dieser name ist nicht einmalig"
     }
+  },
+  "LANGUAGES": {
+    "ENGLISH": "Englisch",
+    "GERMAN": "Deutsch"
+  },
+  "OVERVIEW": {
+    "LABEL": {
+      "BANK": "Bank",
+      "TRANSACTION": "Überweisung",
+      "END_GAME": "Spiel beenden",
+      "NEW_GAME": "Neues Spiel beginnen"
+    }
+  },
+  "TRANSACTION": {
+    "LABEL": {
+      "PLAYER": "Spieler",
+      "AMOUNT": "Menge",
+      "FROM": "Von",
+      "TO": "An",
+      "CANCEL": "Abbrechen",
+      "GO": "Durchführen"
+    }
+  }
 }
