@@ -18,7 +18,10 @@
       "BANK": "Bank",
       "TRANSACTION": "Überweisung",
       "END_GAME": "Spiel beenden",
-      "NEW_GAME": "Neues Spiel beginnen"
+      "NEW_GAME": "Neues Spiel beginnen",
+      "CANCEL": "Abbruch",
+      "END": "Beenden",
+      "CONFORMATION": "Willst du wirklich das spiel beenden?"
     }
   },
   "TRANSACTION": {

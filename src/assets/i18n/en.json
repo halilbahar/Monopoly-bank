@@ -18,7 +18,10 @@
       "BANK": "Bank",
       "TRANSACTION": "Transaction",
       "END_GAME": "End game",
-      "NEW_GAME": "New game"
+      "NEW_GAME": "New game",
+      "CANCEL": "Cancel",
+      "END": "Quit",
+      "CONFORMATION": "Do you really want to quit the game?"
     }
   },
   "TRANSACTION": {

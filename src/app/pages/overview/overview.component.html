@@ -17,7 +17,7 @@
 </div>
 
 <div class="button-box-top end-game-button">
-  <button mat-raised-button color="primary" routerLink="/leaderboard">
+  <button mat-raised-button color="primary" (click)="openEndGameDialog()">
     {{ 'OVERVIEW.LABEL.END_GAME' | translate }}
   </button>
 </div>

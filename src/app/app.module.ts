@@ -2,6 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
@@ -20,6 +21,7 @@ import { LeaderboardComponent } from './pages/leaderboard/leaderboard.component'
 import { MultiTransactionComponent } from './pages/multi-transaction/multi-transaction.component';
 import { OverviewComponent } from './pages/overview/overview.component';
 import { SingleTransactionComponent } from './pages/single-transaction/single-transaction.component';
+import { EndGameDialogComponent } from './components/end-game-dialog/end-game-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SingleTransactionComponent } from './pages/single-transaction/single-tr
     OverviewComponent,
     MultiTransactionComponent,
     SingleTransactionComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    EndGameDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { SingleTransactionComponent } from './pages/single-transaction/single-tr
     MatSelectModule,
     MatMenuModule,
     HttpClientModule,
+    MatDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
