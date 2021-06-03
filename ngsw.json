@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622420129010,
+  "timestamp": 1622764122191,
   "index": "/monopoly-bank/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/monopoly-bank/favicon.ico",
         "/monopoly-bank/index.html",
-        "/monopoly-bank/main.aff32e439341c4c06786.js",
+        "/monopoly-bank/main.928d8f6b48e0b7bfd3b9.js",
         "/monopoly-bank/manifest.webmanifest",
         "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js",
         "/monopoly-bank/runtime.622d6839b34525748e31.js",
@@ -45,8 +45,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/monopoly-bank/assets/i18n/de.json": "40f8d52daa09fda50a633a6ac3f2e2edf3595841",
-    "/monopoly-bank/assets/i18n/en.json": "224616a09db9559931d93a36e9114a21705856ec",
+    "/monopoly-bank/assets/i18n/de.json": "47a19a0deb4e380d79c818233f3548c866186c10",
+    "/monopoly-bank/assets/i18n/en.json": "11e1d81cd3e2a5d4b1598afdab32e0450d2aaaa8",
     "/monopoly-bank/assets/icons/icon-128x128.png": "a8f4b05c4e711b9c3f4df95f1ce17af226900755",
     "/monopoly-bank/assets/icons/icon-144x144.png": "d16bae24175d04acda7e4e522644d7227803effc",
     "/monopoly-bank/assets/icons/icon-152x152.png": "4b6fd584bc8aad57422f2eeeb11a6e3ed3232bdd",
@@ -56,8 +56,8 @@
     "/monopoly-bank/assets/icons/icon-72x72.png": "2f3abde545c8ba064adee3712de5ba96210fc686",
     "/monopoly-bank/assets/icons/icon-96x96.png": "e50ff9fc8eaf1a6651e2ef08542f1d1e0d9020b7",
     "/monopoly-bank/favicon.ico": "5b032a2ed4eab279180abc061b3bd07935cf986d",
-    "/monopoly-bank/index.html": "e4d84e2f4336cdf71d889be427d543654005274f",
-    "/monopoly-bank/main.aff32e439341c4c06786.js": "f7206ce628e30465dcae48711e9d17457820b9b9",
+    "/monopoly-bank/index.html": "ab7cba037c3fac55f4b954803b12182f6fab1ec1",
+    "/monopoly-bank/main.928d8f6b48e0b7bfd3b9.js": "531859cfdbc16ebf1221f9b046d048788e221cb7",
     "/monopoly-bank/manifest.webmanifest": "2ca5fbf82ca56adbe3597fa9bc5d45aca9c85806",
     "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js": "76ecd4853cf493df6a81609e5978c619e0c08a01",
     "/monopoly-bank/runtime.622d6839b34525748e31.js": "4d2402a8f9ab309e70134691742dd953060a8a3d",
