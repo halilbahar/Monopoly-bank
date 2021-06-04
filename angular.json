@@ -26,7 +26,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest",
-              "src/icon.png"
+              "src/icon.jpg"
             ],
             "styles": [
               "src/styles.scss"
