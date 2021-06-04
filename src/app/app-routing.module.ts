@@ -11,11 +11,11 @@ import { SingleTransactionComponent } from './pages/single-transaction/single-tr
 
 const routes: Routes = [
   { path: '', canActivate: [NoGameGuard], component: HomeComponent },
+  { path: 'overview', component: OverviewComponent, canActivate: [GameGuard] },
   {
     path: '',
     canActivate: [GameGuard],
     children: [
-      { path: 'overview', component: OverviewComponent },
       { path: 'bank', component: SingleTransactionComponent },
       { path: 'transaction', component: MultiTransactionComponent },
       { path: 'leaderboard', component: LeaderboardComponent }
