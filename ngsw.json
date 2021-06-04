@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1622807941729,
+  "timestamp": 1622808311918,
   "index": "/monopoly-bank/index.html",
   "assetGroups": [
     {
@@ -58,7 +58,7 @@
     "/monopoly-bank/assets/icons/icon-96x96.png": "e50ff9fc8eaf1a6651e2ef08542f1d1e0d9020b7",
     "/monopoly-bank/favicon.ico": "5b032a2ed4eab279180abc061b3bd07935cf986d",
     "/monopoly-bank/icon.jpg": "4d56da3040953539a50ca5653eed2649c766a091",
-    "/monopoly-bank/index.html": "ab7cba037c3fac55f4b954803b12182f6fab1ec1",
+    "/monopoly-bank/index.html": "8dfb1957d062cd84ce441b5f41a58233907672f2",
     "/monopoly-bank/main.928d8f6b48e0b7bfd3b9.js": "531859cfdbc16ebf1221f9b046d048788e221cb7",
     "/monopoly-bank/manifest.webmanifest": "2ca5fbf82ca56adbe3597fa9bc5d45aca9c85806",
     "/monopoly-bank/polyfills.33306d7e40a9472fcbc8.js": "76ecd4853cf493df6a81609e5978c619e0c08a01",
