@@ -1,4 +1,4 @@
-# MonopolyBank
+# Monopoly Bank
 
 This project is a monopoly banking system for the browser. You can visit it [here](https://halilbahar.github.io/monopoly-bank).
 
